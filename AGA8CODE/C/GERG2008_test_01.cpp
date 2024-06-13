@@ -11,7 +11,7 @@ int main()
         0.00165, 0.00215, 0.00088, 0.00024, 0.00015, 0.00009, 0.004, 0.005,
         0.002, 0.0001, 0.0025, 0.007, 0.001};
     const int NcGERG = 21;
-    std::vector<double> x(_x, _x+NcGERG), xGrs(4,0);
+    std::vector<double> x(_x, _x+NcGERG);
     x.insert(x.begin(), 0.0);
     double mm = 0;
     MolarMassGERG(x, mm);
