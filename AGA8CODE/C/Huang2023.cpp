@@ -7,27 +7,28 @@
 #include "GERG2008.h"
 
 // The compositions in the x() array use the following order and must be sent as mole fractions:
-//     0 - Methane
-//     1 - Nitrogen
-//     2 - Carbon dioxide
-//     3 - Ethane
-//     4 - Propane
-//     5 - Isobutane
-//     6 - n-Butane
-//     7 - Isopentane
-//     8 - n-Pentane
-//     9 - n-Hexane
-//    10 - n-Heptane
-//    11 - n-Octane
-//    12 - n-Nonane
-//    13 - n-Decane
-//    14 - Hydrogen
-//    15 - Oxygen
-//    16 - Carbon monoxide
-//    17 - Water
-//    18 - Hydrogen sulfide
-//    19 - Helium
-//    20 - Argon
+//     0 - UNUSED The array is comprised of 22 elements empty at 0
+//     1 - Methane
+//     2 - Nitrogen
+//     3 - Carbon dioxide
+//     4 - Ethane
+//     5 - Propane
+//     6 - Isobutane
+//     7 - n-Butane
+//     8 - Isopentane
+//     9 - n-Pentane
+//    10 - n-Hexane
+//    11 - n-Heptane
+//    12 - n-Octane
+//    13 - n-Nonane
+//    14 - n-Decane
+//    15 - Hydrogen
+//    16 - Oxygen
+//    17 - Carbon monoxide
+//    18 - Water
+//    19 - Hydrogen sulfide
+//    20 - Helium
+//    21 - Argon
 
 
 void densityCalculation(std::vector<double> composition, double temperature, const std::string& caseName){
@@ -60,10 +61,10 @@ void densityCalculation(std::vector<double> composition, double temperature, con
 }
 
 int main(){
-    std::vector<double> composition_50CH4_50H2 = {0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 0, 0};
-    std::vector<double> composition_95CH4_5H2 = {0.95, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.05, 0, 0, 0, 0, 0, 0};
-    std::vector<double> composition_50N2_50H2 = {0, 0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 0, 0};
-    std::vector<double> composition_90CO2_10H2 = {0, 0, 0.9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.1, 0, 0, 0, 0, 0, 0};
+    std::vector<double> composition_50CH4_50H2 = {0, 0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 0, 0};
+    std::vector<double> composition_95CH4_5H2 = {0, 0.95, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.05, 0, 0, 0, 0, 0, 0};
+    std::vector<double> composition_50N2_50H2 = {0, 0, 0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 0, 0};
+    std::vector<double> composition_90CO2_10H2 = {0, 0, 0, 0.9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.1, 0, 0, 0, 0, 0, 0};
     const int NcGERG = 21; //Number of components (It is fixed)
 
     double temperature = 325, /* [K] */ pressure = 101.325 /* [kPa] */, molarDensity = 0 /* [mol/l] */, compressibilityFactor = 0 /*[-]*/;
